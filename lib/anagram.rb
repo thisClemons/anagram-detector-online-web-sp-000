@@ -10,7 +10,7 @@ class Anagram
   def match(sentence)
     sorted_word = self.word.split("").sort
 
-    sentences.find_all {|word| word.split("").sort == sorted_word}
+    sentence.find_all {|word| word.split("").sort == sorted_word}
   end
 
 

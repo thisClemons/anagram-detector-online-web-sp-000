@@ -8,11 +8,9 @@ class Anagram
   end
 
   def match(sentence)
-    sorted_word = self.word.split("").sort.join
+    sorted_word = self.word.split("").sort
 
-    sorted_sentences = sentence.collect {|word| word.split("").sort.join}
-
-    sorted_sentences.find_all {|word| word == sorted_word}
+    sentences.find_all {|word| word.split("").sort == sorted_word}
   end
 
 
